@@ -25,3 +25,28 @@ lint: linter_include_check
 ## LINTER stuff end
 # ----
 ```
+
+Don't forget to add `linter.mk` and `.golangci.yml` to project `.gitignore` file
+
+### tests.mk
+
+Adds commands to test golang project.
+
+Add this lines to your Makefile and run `make tests`:
+
+```makefile
+# ----
+## TESTS stuff start
+
+tests_include_check:
+	@[ -f tests.mk ] && echo "tests.mk include exists" || (echo "getting tests.mk from github.com" && curl -sO https://raw.githubusercontent.com/spacetab-io/makefiles/master/golang/tests.mk)
+
+tests: tests_include_check
+	@make -f tests.mk go_tests
+.PHONY: tests
+
+## TESTS stuff end
+# ----
+```
+
+Don't forget to add `tests.mk` to project `.gitignore` file
