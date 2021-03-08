@@ -45,6 +45,11 @@ tests: tests_include_check
 	@make -f tests.mk go_tests
 .PHONY: tests
 
+tests_html: tests_include_check
+	@make -f tests.mk go_tests_html
+	@open coverage.html
+.PHONY: tests_html
+
 ## TESTS stuff end
 # ----
 ```
