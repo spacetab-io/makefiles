@@ -11,4 +11,4 @@ rm_cover_profile:
 	@rm c.out
 
 go_tests: go_run_unit_tests rm_cover_profile
-go_tests_html: go_run_unit_tests go_get_html_coverage rm_cover_profile
+go_tests_html: go_run_unit_tests go_get_html_coverage
