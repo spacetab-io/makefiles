@@ -11,7 +11,7 @@ Adds commands to lint golang project with golangci-lint with [custom config](htt
 
 Add this lines to your Makefile and run `make lint`:
 
-```makefile
+```Makefile
 # ----
 ## LINTER stuff start
 
@@ -26,7 +26,7 @@ lint: linter_include_check
 # ----
 ```
 
-Don't forget to add `linter.mk` and `.golangci.yml` to project `.gitignore` file
+Don't forget to add `linter.mk` and `.golangci*.yml` to project `.gitignore` file
 
 ### tests.mk
 
@@ -34,7 +34,7 @@ Adds commands to test golang project.
 
 Add this lines to your Makefile and run `make tests`:
 
-```makefile
+```Makefile
 # ----
 ## TESTS stuff start
 
