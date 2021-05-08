@@ -6,7 +6,7 @@ CONFIG_PATH=.golangci_$(subst .,_,${CONFIG_VERSION}).yml
 .PHONY: go_lint get_go_lint_binary get_go_lint_config
 
 get_go_lint_binary:
-	@[ -f ${LINTER_PATH} ] && echo "golangci-lint exists" || ( echo "getting golangci-lint" && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b ./bin $(LINTER_VERSION) | mv ./bin/golangci-lint ${LINTER_PATH})
+	@[ -f ${LINTER_PATH} ] && echo "golangci-lint exists" || ( echo "getting golangci-lint" && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b ./bin $(LINTER_VERSION) && mv ./bin/golangci-lint ${LINTER_PATH})
 	@${LINTER_PATH} --version
 
 get_go_lint_config:
