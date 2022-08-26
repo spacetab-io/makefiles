@@ -1,7 +1,7 @@
 .PHONY: go_tests go_tests_html go_run_unit_tests go_get_html_coverage
 
 go_run_unit_tests:
-	@go test -cover -race -timeout 5s -coverprofile=c.out -v ./...
+	@go test -cover -race -timeout 10s -coverprofile=c.out -v ./...
 	@go tool cover -func=c.out
 
 go_get_html_coverage:
