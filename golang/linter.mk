@@ -1,6 +1,6 @@
-LINTER_VERSION=v1.49.0
+LINTER_VERSION=v1.54.2
 LINTER_PATH=./bin/golangci-lint_$(subst .,_,${LINTER_VERSION})
-CONFIG_VERSION=v1.1.0
+CONFIG_VERSION=v1.2.0
 CONFIG_PATH=.golangci_$(subst .,_,${CONFIG_VERSION}).yml
 
 .PHONY: go_lint get_go_lint_binary get_go_lint_config
